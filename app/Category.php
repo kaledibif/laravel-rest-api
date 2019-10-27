@@ -21,6 +21,12 @@ class Category extends Model
         'order',
     ];
 
+    protected $casts = [
+        'color_id' => 'integer',
+        'icon_id' => 'integer',
+        'order' => 'integer'
+    ];
+
     public function items()
     {
         return $this->hasMany(Item::class);

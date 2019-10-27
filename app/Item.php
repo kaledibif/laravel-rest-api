@@ -21,6 +21,11 @@ class Item extends Model
         'details',
     ];
 
+    protected $casts = [
+        'category_id' => 'integer',
+        'date' => 'date',
+    ];
+
     public function images()
     {
         return $this->hasMany(Image::class);
