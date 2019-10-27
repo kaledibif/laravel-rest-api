@@ -9,7 +9,7 @@ use Illuminate\Http\Response;
 class ColorController extends BaseController
 {
     /**
-     * Display a listing of the resource.
+     * Get all resources.
      *
      * @return Response
      */
