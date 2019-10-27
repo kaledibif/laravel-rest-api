@@ -47,4 +47,20 @@ class BaseController extends Controller
 
         return response()->json($response, $code);
     }
+
+    /**
+     * Delete response method.
+     *
+     * @param string $message
+     * @return Response
+     */
+    public function deleteResponse($message)
+    {
+        $response = [
+            'success' => true,
+            'message' => $message,
+        ];
+
+        return response()->json($response, 200);
+    }
 }
