@@ -22,6 +22,7 @@ class Item extends Model
     ];
 
     protected $casts = [
+        'value' => 'decimal:2',
         'category_id' => 'integer',
         'date' => 'date',
     ];
