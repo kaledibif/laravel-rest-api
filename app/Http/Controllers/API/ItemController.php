@@ -47,7 +47,7 @@ class ItemController extends BaseController
 
         $item = Item::create($input);
 
-        return $this->sendResponse($item->toArray(), 'Item created successfully.');
+        return $this->sendResponse($item->fresh()->toArray(), 'Item created successfully.');
     }
 
     /**
@@ -92,7 +92,7 @@ class ItemController extends BaseController
 
         $item->update($input);
 
-        return $this->sendResponse($item->toArray(), 'Item updated successfully.');
+        return $this->sendResponse($item->fresh()->toArray(), 'Item updated successfully.');
     }
 
     /**
