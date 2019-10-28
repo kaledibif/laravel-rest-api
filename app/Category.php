@@ -27,6 +27,11 @@ class Category extends Model
         'order' => 'integer'
     ];
 
+    public function delete()
+    {
+        $this->items()->delete();
+    }
+
     public function items()
     {
         return $this->hasMany(Item::class);
