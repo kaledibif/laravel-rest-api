@@ -94,10 +94,9 @@ class CategoryController extends BaseController
     }
 
     /**
-     * Remove the specific resource.
-     *
      * @param Category $category
      * @return Response
+     * @throws \Exception
      */
     public function destroy(Category $category)
     {
